@@ -1,0 +1,241 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffd166;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #ff851b;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffdc00;
+}
+
+/* Player List Styles */
+.players-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.players-list li {
+    background-color: #ff7b25;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.players-list li img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.players-list li span {
+    font-size: 20px;
+    color: #1e3799;
+}
+
+.player-wrapper button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.player-wrapper button:hover {
+    background-color: #ff5252;
+}
+
+/* Home Page Styles */
+.home-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(45deg, #f3d8e2, #ffd6dc);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 48px;
+    color: #d81b60;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 36px;
+    color: #d81b60;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 24px;
+    color: #d81b60;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.animated-button {
+    display: inline-block;
+    padding: 15px 40px;
+    margin: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    background-size: 200% auto;
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+    background-position: right center;
+}
+
+
+/* Featured Players Section Styles */
+.featured-players {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background: linear-gradient(45deg, #ff851b, black);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+
+.featured-description {
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff851b, black);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulsate 2s infinite alternate;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.player-card {
+    width: 140px;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+.player-image {
+    width: 100%;
+    height: 50%;
+    /* Adjusted height */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.player-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.player-card:hover .player-details {
+    opacity: 1;
+}
+
+.player-name,
+.player-position {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+.player-position {
+    margin-top: 5px;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
